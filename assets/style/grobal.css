@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+
+:root {
+    --bg-color-main: #060E1B;
+    --bg-color-main-sub: #D4BA74;
+
+    --texto-color-main: #ffffff;
+    --texto-color-sub: #cbcbcb;
+
+    --font-title: clamp(15px, 1vw, 25px);
+    --font-sub-title: clamp(13px, 1vw, 19px);
+    --font-icones: clamp(25px, 1vw, 32px);
+
+    --spacing-header: 80px;
+
+}
+
+body {
+    background: black;
+
+}

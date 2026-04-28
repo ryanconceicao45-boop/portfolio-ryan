@@ -1,0 +1,55 @@
+/* 
+   DESCRIÇÃO:
+   Estilização do header com comportamento responsivo.
+   Inclui menu desktop, mobile e ajustes de layout.
+*/
+@media screen and (max-width: 768px) {
+    header nav {
+        padding: 0 20px;
+    }
+
+    header nav .box-right-menu .menu-btn {
+        display: flex;
+        cursor: pointer;
+        font-size: var(--font-icones);
+        transition: 0.5s;
+        transform: rotate(0deg);
+    }
+
+    header nav .box-right-menu .menu-btn.active-btn {
+        transition: 0.5s;
+        transform: rotate(-180deg);
+    }
+
+    header nav .box-navegacao {
+        position: fixed;
+        top: calc(var(--spacing-header));
+        right: -55vw;
+        width: 30vw;
+        height: 250px;
+
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+
+        background: var(--bg-color-main);
+        border-radius: 0 0 0 20px;
+        transition: 0.5s ease;
+        z-index: 1000;
+    }
+
+    header nav .box-navegacao.active {
+        right: 2px;
+    }
+
+    header nav .box-navegacao a:hover {
+        background: var(--bg-color-main-sub);
+        padding: 10px 17px;
+        color: var(--bg-color-main);
+    }
+
+}
