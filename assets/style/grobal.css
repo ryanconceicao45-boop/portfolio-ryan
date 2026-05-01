@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=Changa+One:ital@0;1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Squada+One&family=Teko:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,24 +8,73 @@
     color: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--spacing-header);
+}
 
+
+input:focus {
+    outline: none;
+}
 
 :root {
-    --bg-color-main: #060E1B;
+    --bg-color-main: #0D1424;
     --bg-color-main-sub: #D4BA74;
+    --bg-color-d-s: #040A17;
+    --bg-color-body: #040A17;
+    --bg-color-line: #232e4b;
+
+    --card-bg-color: #171E30;
 
     --texto-color-main: #ffffff;
-    --texto-color-sub: #cbcbcb;
+    --texto-color-sub: #dedede;
+    --texto-color-rev: #060E1B;
 
-    --font-title: clamp(15px, 1vw, 25px);
-    --font-sub-title: clamp(13px, 1vw, 19px);
+    --color-star: #ffffff;
+
+    --fonte-header-title: clamp(12px, 1vw, 19px);
+    --fonte-header-sub: clamp(12px, 1vw, 19px);
+    --fonte-header-menu: clamp(45px, 1vw, 55px);
+
+
+    --font-title-super: clamp(38px, 1vw, 45px);
+    --font-title: clamp(14px, 1vw, 19px);
+    --font-sub-title: clamp(12px, 1vw, 15px);
     --font-icones: clamp(25px, 1vw, 32px);
+    --font-card-title: clamp(17px, 1vw, 22px);
 
-    --spacing-header: 80px;
+    --font-resp-title: clamp(19px, 1vw, 22px);
+    --font-resp-sub: clamp(13px, 1vw, 17px);
+    --font-resp-icon: clamp(25px, 1vw, 32px);
+
+    --spacing-header: 60px;
 
 }
 
 body {
-    background: black;
+    background: var(--bg-color-body);
+    -webkit-font-smoothing: antialiased;
+}
 
+/* largura da barra */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+/* fundo da barra */
+::-webkit-scrollbar-track {
+    background: var(--color-header);
+}
+
+/* parte que se move */
+::-webkit-scrollbar-thumb {
+    background: var(--bg-color-main-sub);
+    border-radius: 10px;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--bg-color-main-sub);
 }

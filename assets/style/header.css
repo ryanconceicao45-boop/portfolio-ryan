@@ -1,17 +1,21 @@
 header {
     position: fixed;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: var(--spacing-header);
     display: flex;
     background: var(--bg-color-main);
+    z-index: 1000;
 }
 
 header nav {
     display: flex;
-    width: 100vw;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px ;
 }
 
 header nav .box-left-header {
@@ -21,20 +25,19 @@ header nav .box-left-header {
 }
 
 header nav .box-left-header img {
-    width: 50px;
+    width: 40px;
     border-radius: 50%;
 }
-
+/*  MEU NOME RYAN  */
 header nav .box-left-header div h3 {
-    font-size: var(--font-title);
+    font-size: var(--fonte-header-title); 
     color: var(--texto-color-main);
 }
 
 header nav .box-left-header div p {
-    font-size: var(--font-sub-title);
+    font-size: var(--fonte-header-sub);
     color: var(--texto-color-sub);
 }
-
 
 header nav .box-right-menu {
     display: flex;
@@ -49,10 +52,11 @@ header nav .box-right-menu .menu-btn{
 
 header nav .box-navegacao a {
     font-size: var(--font-sub-title);
+    color: var(--texto-color-sub);
     text-decoration: none;
     font-weight: 500;
     border-radius: 10px;
-    padding: 10px 17px;
+    padding: 5px 17px;
     transition: 0.3s;
 }
 
@@ -60,6 +64,5 @@ header nav .box-navegacao a:hover {
     transform: scale(1.15);
     transition: 0.3s;
     background: var(--bg-color-main-sub);
-    padding: 10px 17px;
     color: var(--bg-color-main);
 } 

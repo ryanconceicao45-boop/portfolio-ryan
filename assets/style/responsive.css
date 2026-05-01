@@ -3,7 +3,7 @@
    Estilização do header com comportamento responsivo.
    Inclui menu desktop, mobile e ajustes de layout.
 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     header nav {
         padding: 0 20px;
     }
@@ -34,7 +34,7 @@
         justify-content: center;
         align-items: center;
 
-        gap: 10px;
+        gap: 20px;
 
         background: var(--bg-color-main);
         border-radius: 0 0 0 20px;
@@ -46,10 +46,100 @@
         right: 2px;
     }
 
-    header nav .box-navegacao a:hover {
-        background: var(--bg-color-main-sub);
-        padding: 10px 17px;
-        color: var(--bg-color-main);
+}
+
+/* 
+   DESCRIÇÃO:
+   Estilização do Home com comportamento responsivo.
+   Inclui menu desktop, mobile e ajustes de layout.
+*/
+@media screen and (max-width: 700px) {
+    #Inicio .conteiner-main {
+        position: relative;
+        top: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        height: calc(100vh - var(--spacing-header));
+        padding: 0 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio .p-prazer {
+        font-size: var(--font-title);
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio h1 {
+        font-size: var(--font-resp-title);
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio h1 span {
+        font-size: var(--font-resp-title);
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio .p-descript {
+        font-size: var(--font-resp-sub);
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio .box-oportunidade span {
+        font-size: var(--font-resp-icon);
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel button {
+        padding: 12px 9px;
+    }
+
+    #Inicio .conteiner-main .box-right-Inicio {
+        padding: 0;
+    }
+
+    #Inicio .conteiner-main .box-right-Inicio img {
+        width: 100%;
+        max-height: 40vh;
+        z-index: 1;
+    }
+
+
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+    #Inicio .conteiner-main {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #Inicio .conteiner-main .box-left-Inicio {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        width: 100%;
+        max-width: 440px;
+    }
+
+    #Inicio .conteiner-main .box-right-Inicio img {
+        width: 100%;
+        max-height: 60vh;
+        z-index: 1;
     }
 
 }

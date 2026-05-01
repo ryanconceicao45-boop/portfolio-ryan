@@ -1,5 +1,51 @@
 {
-    "Principal": {
-        
+  "Projetos": [
+    {
+      "id": 0,
+      "titulo": "Calculadora",
+      "data": "2026-04-15",
+      "descricao": "Esses são alguns dos meus projetos que realizei durEsses são alguns dos meus projetos que realizei durante a minha jornada como programador.",
+      "imagem": "/assets/img/project/calculadora-1.png",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "linkSite": "https://meusite.com/calculadora",
+      "linkCodigo": "https://github.com/seuuser/calculadora",
+      "destaque": true
+    },
+    {
+      "id": 1,
+      "titulo": "Conversor Universal",
+      "data": "2026-04-15",
+      "descricao": "ssesses são alguns dos meus projetos que realizei duras são alguns dos meus projetos que realizei duraEsses são alguns dos meus projetos que realizei durante a minha jornada como programador.",
+      "imagem": "/assets/img/project/converty-2.png",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "APIs"
+      ],
+      "linkSite": "https://meusite.com/calculadora",
+      "linkCodigo": "https://github.com/seuuser/calculadora",
+      "destaque": true
+    },
+    {
+      "id": 1,
+      "titulo": "Conversor Universal",
+      "data": "2026-04-15",
+      "descricao": "ssesses são alguns dos meus projetos que realizei duras são alguns dos meus projetos que realizei duraEsses são alguns dos meus projetos que realizei durante a minha jornada como programador.",
+      "imagem": "/assets/img/project/converty-2.png",
+      "tecnologias": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "APIs"
+      ],
+      "linkSite": "https://meusite.com/calculadora",
+      "linkCodigo": "https://github.com/seuuser/calculadora",
+      "destaque": true
     }
+  ]
 }
