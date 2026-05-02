@@ -38,7 +38,7 @@ async function LoadPage() {
 }
 LoadPage()
 
-const elementos = document.querySelectorAll('.box-left-Inicio, img')
+const elementos = document.querySelectorAll('.box-left-Inicio, .img-avatar-v, .img-avatar-p, .box-history, .box-redes-sociais, .box-bnt-CV')
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

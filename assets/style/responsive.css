@@ -143,3 +143,42 @@
     }
 
 }
+
+
+/* 
+   SOBRE:
+   Estilização do Home com comportamento responsivo.
+   Inclui menu desktop, mobile e ajustes de layout.
+*/
+@media screen and (max-width: 700px) {
+    #Sobre .conteiner-sobre {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    #Sobre .conteiner-sobre .box-redes-sociais {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 0;
+    }
+
+    #Sobre .conteiner-sobre .box-bnt-CV {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Sobre .conteiner-sobre .box-img .img-avatar-p {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {}

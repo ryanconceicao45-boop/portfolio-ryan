@@ -8,6 +8,7 @@
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+    border-radius: 0 0 20px 20px;
 }
 
 .stars {
@@ -110,15 +111,15 @@
 #Inicio .conteiner-main .box-left-Inicio {
     width: 100%;
     max-width: 500px;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.9s ease;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
 }
 
 /* quando aparece */
 #Inicio .conteiner-main .box-left-Inicio.show {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 #Inicio .conteiner-main .box-left-Inicio .p-prazer {
@@ -212,17 +213,18 @@
     padding: 20px;
 }
 
-#Inicio .conteiner-main .box-right-Inicio img {
+#Inicio .conteiner-main .box-right-Inicio .img-avatar-v {
     width: 100%;
     max-width: 45vh;
     z-index: 1;
-    transform: translateY(50px);
-    transition: all 0.9s ease;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
 }
 
-#Inicio .conteiner-main .box-right-Inicio img.show {
-    opacity: 1;
-    transform: translateY(0);
+#Inicio .conteiner-main .box-right-Inicio .img-avatar-v.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 /* 
@@ -233,7 +235,180 @@
 #Sobre {
     position: relative;
     top: var(--spacing-header);
-    background: #070E1C;
+    background: #0a142d;
     width: 100%;
     height: calc(100vh - var(--spacing-header));
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+}
+
+#Sobre .conteiner-sobre {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100vh - var(--spacing-header));
+    display: flex;
+    gap: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+#Sobre .conteiner-sobre .box-img {
+    width: 100%;
+    max-width: 400px;
+}
+
+#Sobre .conteiner-sobre .box-img .img-avatar-p {
+    width: 100%;
+    max-width: 600px;
+    z-index: 1;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+#Sobre .conteiner-sobre .box-img .img-avatar-p.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
+}
+
+/* Linha do meio */
+/* #Sobre .conteiner-sobre .line-sobre-dv {
+    background: var(--bg-color-line);
+    margin: 0 10px;
+    width: 2px;
+    height: 300px;
+} */
+
+#Sobre .conteiner-sobre .box-quem-sou-eu {
+    width: 100%;
+  max-width: 500px;
+}
+
+/* MINHA HISTORIA */
+#Sobre .conteiner-sobre .box-history {
+    width: 100%;
+    max-width: 500px;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+#Sobre .conteiner-sobre .box-history.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
+}
+
+#Sobre .conteiner-sobre .box-history .p-sobre-mim {
+    font-size: var(--font-title);
+    color: var(--bg-color-main-sub);
+    font-weight: 600;
+}
+
+#Sobre .conteiner-sobre .box-history h2 {
+    font-family: "Teko", sans-serif;
+    line-height: 40px;
+    font-size: var(--font-title-super);
+    color: var(--texto-color-main);
+    font-weight: 600;
+}
+
+#Sobre .conteiner-sobre .box-history .p-sobre-hq {
+    font-size: var(--font-title);
+    color: var(--texto-color-sub);
+}
+
+#Sobre .conteiner-sobre .box-redes-sociais {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    gap: 9px;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+#Sobre .conteiner-sobre .box-redes-sociais.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
+}
+
+.link-redes-img {
+    width: 20px;
+}
+#Sobre .conteiner-sobre .box-redes-sociais .link-redes {
+    background: var(--color-link-box);
+    border: 1px solid var(--bg-color-line);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+#Sobre .conteiner-sobre .box-redes-sociais .link-redes:hover {
+    transition: 0.4s;
+    transform: scale(0.97);
+}
+
+
+#Sobre .conteiner-sobre .box-bnt-CV {
+    width: 100%;
+    display: flex;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+#Sobre .conteiner-sobre .box-bnt-CV a {
+    background: var(--bg-color-main-sub);
+    font-size: var(--font-card-sup);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--texto-color-rev);
+    font-weight: 500;
+    transition: 0.4s;
+}
+
+#Sobre .conteiner-sobre .box-bnt-CV a:hover {
+    transition: 0.4s;
+    transform: scale(0.97);
+}
+
+
+#Sobre .conteiner-sobre .box-bnt-CV a span {
+    font-size: var(--font-icones);
+    color: var(--texto-color-rev);
+}
+
+#Sobre .conteiner-sobre .box-bnt-CV.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
+}
+
+
+/* 
+====================================
+============= (SOBRE) ==============
+====================================
+*/
+#Habilidade {
+    position: relative;
+    top: var(--spacing-header);
+    background: #0d1a38;
+    width: 100%;
+    height: calc(100vh - var(--spacing-header));
+    /* overflow: hidden; */
 }

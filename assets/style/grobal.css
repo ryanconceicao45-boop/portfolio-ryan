@@ -31,6 +31,8 @@ input:focus {
     --texto-color-sub: #dedede;
     --texto-color-rev: #060E1B;
 
+    --color-link-box: #171F31;
+
     --color-star: #ffffff;
 
     --fonte-header-title: clamp(12px, 1vw, 19px);
@@ -51,6 +53,13 @@ input:focus {
     --font-resp-icon: clamp(25px, 1vw, 32px);
 
     --spacing-header: 60px;
+
+    --anime-opacity: 0;
+    --anime-transform: translateY(40px);
+    --anime-transition: all 1.9s ease;
+
+    --anime-hover-opacity: all 1.9s ease;
+    --anime-hover-transition: translateY(0);
 
 }
 
