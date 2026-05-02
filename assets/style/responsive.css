@@ -43,7 +43,7 @@
     }
 
     header nav .box-navegacao.active {
-        right: 2px;
+        right: 0;
     }
 
 }
@@ -102,7 +102,7 @@
         align-items: center;
     }
 
-    #Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel button {
+    #Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel a {
         padding: 12px 9px;
     }
 

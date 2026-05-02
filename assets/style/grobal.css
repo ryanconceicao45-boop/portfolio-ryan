@@ -20,7 +20,7 @@ input:focus {
 
 :root {
     --bg-color-main: #0D1424;
-    --bg-color-main-sub: #D4BA74;
+    --bg-color-main-sub: #ffc534;
     --bg-color-d-s: #040A17;
     --bg-color-body: #040A17;
     --bg-color-line: #232e4b;
@@ -42,7 +42,9 @@ input:focus {
     --font-title: clamp(14px, 1vw, 19px);
     --font-sub-title: clamp(12px, 1vw, 15px);
     --font-icones: clamp(25px, 1vw, 32px);
-    --font-card-title: clamp(17px, 1vw, 22px);
+
+    --font-card-title: clamp(20px, 1vw, 22px);
+    --font-card-sup: clamp(15px, 1vw, 20px);
 
     --font-resp-title: clamp(19px, 1vw, 22px);
     --font-resp-sub: clamp(13px, 1vw, 17px);

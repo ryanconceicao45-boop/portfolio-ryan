@@ -1,0 +1,23 @@
+/* 
+   RESPONSIVE: PROJETOS
+   Estilização do Home com comportamento responsivo.
+   Inclui menu desktop, mobile e ajustes de layout.
+*/
+
+@media screen and (max-width: 1080px) {
+    main .cont-base {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .cont-base {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}

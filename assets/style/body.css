@@ -51,7 +51,7 @@
     top: 0;
     left: 0;
     right: 0;
-    width: 50px;
+    width: 30px;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--color-star));
     animation: shoot 3s infinite ease-in;
@@ -110,6 +110,15 @@
 #Inicio .conteiner-main .box-left-Inicio {
     width: 100%;
     max-width: 500px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease;
+}
+
+/* quando aparece */
+#Inicio .conteiner-main .box-left-Inicio.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #Inicio .conteiner-main .box-left-Inicio .p-prazer {
@@ -162,9 +171,11 @@
     0% {
         opacity: 0.4;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.4;
     }
@@ -177,7 +188,7 @@
     gap: 6px;
 }
 
-#Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel button {
+#Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel a {
     display: flex;
     padding: 10px 19px;
     border: none;
@@ -185,23 +196,18 @@
     background: var(--bg-color-main-sub);
     font-size: var(--font-title);
     font-weight: 500;
+    text-decoration: none;
     color: var(--bg-color-main);
     cursor: pointer;
     transition: 0.3s;
 }
 
-#Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel button:hover {
+#Inicio .conteiner-main .box-left-Inicio .box-btn-disponivel a:hover {
     transition: 0.3s;
     transform: scale(0.97);
 }
 
 
-
-/* 
-====================================
-==============IMG HOME==============
-====================================
-*/
 #Inicio .conteiner-main .box-right-Inicio {
     padding: 20px;
 }
@@ -210,13 +216,24 @@
     width: 100%;
     max-width: 45vh;
     z-index: 1;
+    transform: translateY(50px);
+    transition: all 0.9s ease;
 }
 
+#Inicio .conteiner-main .box-right-Inicio img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 
+====================================
+============= (SOBRE) ==============
+====================================
+*/
 #Sobre {
     position: relative;
-    top: 0;
-    background: #fff;
-    width: 100%;
-    height: 100vh;
     top: var(--spacing-header);
+    background: #070E1C;
+    width: 100%;
+    height: calc(100vh - var(--spacing-header));
 }
