@@ -24,15 +24,18 @@ input:focus {
     --bg-color-d-s: #040A17;
     --bg-color-body: #040A17;
     --bg-color-line: #232e4b;
+    --bg-color-line2: #3a4871;
 
     --card-bg-color: #171E30;
+
+    --tach-bg: #121a2e;
+    --tach-bg-card: #192138;
 
     --texto-color-main: #ffffff;
     --texto-color-sub: #dedede;
     --texto-color-rev: #060E1B;
 
     --color-link-box: #171F31;
-
     --color-star: #ffffff;
 
     --fonte-header-title: clamp(12px, 1vw, 19px);
@@ -42,7 +45,7 @@ input:focus {
 
     --font-title-super: clamp(38px, 1vw, 45px);
     --font-title: clamp(14px, 1vw, 19px);
-    --font-sub-title: clamp(12px, 1vw, 15px);
+    --font-sub-title: clamp(13px, 1vw, 16px);
     --font-icones: clamp(25px, 1vw, 32px);
 
     --font-card-title: clamp(20px, 1vw, 22px);

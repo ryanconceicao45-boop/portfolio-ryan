@@ -4,6 +4,35 @@
     "descricao": "Especializado no desenvolvimento de aplicações eficientes e escaláveis, com foco em qualidade de código, performance e entrega de soluções que agregam valor ao negócio.",
     "available": "<span>•</span>Disponível para novas oportunidades"
   },
+  "Habilidades": [
+    {
+      "id": 0,
+      "img": "icon-html.png",
+      "Nome": "HTML5",
+      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
+      "inicio": "01/02/2026",
+      "nivel": "Intermediário",
+      "foco": "Front-end Acessível"
+    },
+    {
+      "id": 1,
+      "img": "icon-css.png",
+      "Nome": "CSS3",
+      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
+      "inicio": "05/02/2026",
+      "nivel": "Intermediário",
+      "foco": "Front-end Acessível"
+    },
+    {
+      "id": 2,
+      "img": "icon-js.png",
+      "Nome": "JavaScript",
+      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
+      "inicio": "05/02/2026",
+      "nivel": "Intermediário",
+      "foco": "Front-end Acessível"
+    }
+  ],
   "Projetos": [
     {
       "id": 0,

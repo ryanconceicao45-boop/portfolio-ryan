@@ -74,7 +74,8 @@
                     <p class="p-sobre-mim">SOBRE MIM</p>
                     <h2>Quem sou eu?</h2>
                     <div>
-                        <p class="p-sobre-hq">Me chamo Ryan da Conceição, tenho 22 anos e iniciei minha trajetória na programação ainda na
+                        <p class="p-sobre-hq">Me chamo Ryan da Conceição, tenho 22 anos e iniciei minha trajetória na
+                            programação ainda na
                             adolescência, quando tive contato com a linguagem Lua, utilizada no desenvolvimento de
                             scripts
                             para sistemas e jogos. Desde então, desenvolvi um forte interesse por tecnologia,
@@ -91,43 +92,133 @@
                         </p>
                     </div>
                 </div>
-                <div class="box-redes-sociais">
-                    <a class="link-redes" href="#">
-                        <img class="link-redes-img" src="./assets/img/tools/icon-github.png" alt="icon-github">
-                        GitHub
-                    </a>
-                    <a class="link-redes" href="#">
-                        <img class="link-redes-img" src="./assets/img/icons/icon-linkdin.png" alt="icon-linkdin">
-                        Linkdin
-                    </a>
-                    <a class="link-redes" href="#">
-                        <img class="link-redes-img" src="./assets/img/icons/icon-Instagram.png" alt="icon-Instagram">
-                        Instagram
-                    </a>
-                </div>
-                <div class="box-bnt-CV">
-                    <a href="#">
-                        Download CV
-                        <span class="material-symbols-outlined">
-                            download
-                        </span>
-                    </a>
+                <div class="conteiner-btns-links">
+                    <div class="box-redes-sociais">
+                        <a class="link-redes" target="_blank" href="https://github.com/ryanconceicao45-boop">
+                            <img class="link-redes-img" src="./assets/img/tools/icon-github.png" alt="icon-github">
+                            GitHub
+                        </a>
+                        <a class="link-redes" target="_blank" href="https://www.linkedin.com/in/ryan-devv">
+                            <img class="link-redes-img" src="./assets/img/icons/icon-linkdin.png" alt="icon-linkdin">
+                            Linkdin
+                        </a>
+                        <a class="link-redes" target="_blank" href="https://www.instagram.com/ryan_stln">
+                            <img class="link-redes-img" src="./assets/img/icons/icon-Instagram.png"
+                                alt="icon-Instagram">
+                            Instagram
+                        </a>
+                    </div>
+                    <div class="box-bnt-CV">
+                        <a target="_blank" href="./assets/img/document/cv-ryan.pdf">
+                            Download CV
+                            <span class="material-symbols-outlined">
+                                download
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="Habilidade">
-
+        <div class="conteiner-hab">
+            <div class="box-heder-hab">
+                <div class="box-infos-hab">
+                    <h2>MEU <span>TECH STACK</span></h2>
+                    <p>Estas são algumas das tecnologias que adquiri ao longo da minha trajetória como desenvolvedor.
+                        <br><br>
+                        Estou em constante evolução, buscando aprender novas ferramentas e aprimorar minhas habilidades.
+                    </p>
+                </div>
+                <img class="img-codes" src="./assets/img/avatas/code.png"
+                    alt="imagem da minha habilidade com tecnologias">
+            </div>
+            <div class="box-tec-frem">
+                <div class="box-tec-infos">
+                    <div>
+                        <span class="material-symbols-outlined">
+                            code_xml
+                        </span>
+                        <h3>Tecnologias & Frameworks</h3>
+                    </div>
+                    <div>
+                        <button class="nav prev material-symbols-outlined">arrow_left</button>
+                        <button class="nav next material-symbols-outlined">arrow_right</button>
+                    </div>
+                </div>
+                <div class="box-frames">
+                </div>
+            </div>
+            <div class="box-Tool">
+                <div class="box-Tool-infos">
+                    <span class="material-symbols-outlined">
+                        build
+                    </span>
+                    <h3>Ferramentas de Desenvolvimento</h3>
+                </div>
+                <div class="box-Tool-frames">
+                    wdwa
+                </div>
+            </div>
+        </div>
     </section>
-    <!--
-    <section id="Projetos">
-
+    <section id="Habilidade-status">
+        <div class="conteiner-stats">
+            <div class="box-header-st">
+                <div class="hed-st-main">
+                    <img id="img-tecs-st" src="./assets/img/icons/icon-html.png" alt="">
+                    <div>
+                        <h3 id="h3-tecs-st"></h3>
+                        <p>Minha jornada de aprendizado</p>
+                    </div>
+                </div>
+                <button onclick="removeSaber()" class="material-symbols-outlined">
+                    close
+                </button>
+            </div>
+            <div class="box-st-indos">
+                <span class="material-symbols-outlined">
+                    developer_guide
+                </span>
+                <div>
+                    <h4>Sobre a minha experiência</h4>
+                    <div class="text-experi-st">
+                        <p id="text-scrip-st"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box-fookes-st">
+                <div class="box-status-st">
+                    <span class="incon-st material-symbols-outlined">
+                        calendar_clock
+                    </span>
+                    <div>
+                        <h4>INICIO</h4>
+                        <p id="date-st"></p>
+                    </div>
+                </div>
+                <div class="box-status-st">
+                    <span class="incon-st  material-symbols-outlined">
+                        android_cell_5_bar
+                    </span>
+                    <div>
+                        <h4>NIVEL</h4>
+                        <p id="niver-st"></p>
+                    </div>
+                </div>
+                <div class="box-status-st">
+                    <span class="incon-st material-symbols-outlined">
+                        my_location
+                    </span>
+                    <div>
+                        <h4>FOCO ATUAL</h4>
+                        <p id="focus-st">Front-end Acessível</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section id="Contato">
-
-    </section> -->
-
     <script src="./assets/src/script.js"></script>
 </body>
 

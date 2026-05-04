@@ -235,7 +235,7 @@
 #Sobre {
     position: relative;
     top: var(--spacing-header);
-    background: #0a142d;
+    background: #050B1C;
     width: 100%;
     height: calc(100vh - var(--spacing-header));
     overflow: hidden;
@@ -276,17 +276,9 @@
     transform: var(--anime-hover-transition);
 }
 
-/* Linha do meio */
-/* #Sobre .conteiner-sobre .line-sobre-dv {
-    background: var(--bg-color-line);
-    margin: 0 10px;
-    width: 2px;
-    height: 300px;
-} */
-
 #Sobre .conteiner-sobre .box-quem-sou-eu {
     width: 100%;
-  max-width: 500px;
+    max-width: 500px;
 }
 
 /* MINHA HISTORIA */
@@ -318,7 +310,7 @@
 }
 
 #Sobre .conteiner-sobre .box-history .p-sobre-hq {
-    font-size: var(--font-title);
+    font-size: var(--font-sub-title);
     color: var(--texto-color-sub);
 }
 
@@ -340,6 +332,7 @@
 .link-redes-img {
     width: 20px;
 }
+
 #Sobre .conteiner-sobre .box-redes-sociais .link-redes {
     background: var(--color-link-box);
     border: 1px solid var(--bg-color-line);
@@ -350,6 +343,7 @@
     align-items: center;
     gap: 10px;
     text-decoration: none;
+    font-size: var(--font-sub-title);
     transition: 0.4s;
 }
 
@@ -369,9 +363,9 @@
 
 #Sobre .conteiner-sobre .box-bnt-CV a {
     background: var(--bg-color-main-sub);
-    font-size: var(--font-card-sup);
+    font-size: var(--font-sub-title);
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -401,14 +395,392 @@
 
 /* 
 ====================================
-============= (SOBRE) ==============
+============= (Habilidade) ==============
 ====================================
 */
 #Habilidade {
     position: relative;
     top: var(--spacing-header);
-    background: #0d1a38;
+    background: #080f22;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.conteiner-hab {
+    margin: 0 auto;
     width: 100%;
-    height: calc(100vh - var(--spacing-header));
-    /* overflow: hidden; */
+    max-width: 1100px;
+    height: calc(120vh - var(--spacing-header));
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+.conteiner-hab.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
+}
+
+.box-heder-hab {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-heder-hab .box-infos-hab {
+    width: 100%;
+    max-width: 430px;
+}
+
+.box-heder-hab .box-infos-hab h2 {
+    font-family: "Teko", sans-serif;
+    font-size: var(--font-title-super);
+    color: var(--texto-color-main);
+}
+
+.box-heder-hab .box-infos-hab h2 span {
+    font-family: "Teko", sans-serif;
+    font-size: var(--font-title-super);
+    color: var(--bg-color-main-sub);
+}
+
+.box-heder-hab .img-codes {
+    width: 30%;
+}
+
+
+/* borda sobre as teconologias */
+.box-tec-frem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--tach-bg);
+    border: 1px solid var(--bg-color-line);
+    padding: 19px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.box-tec-frem .box-tec-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.box-tec-frem .box-tec-infos div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box-tec-frem .box-tec-infos div span {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 10px;
+    background: var(--bg-color-line);
+    color: var(--bg-color-main-sub);
+}
+
+.box-tec-frem .box-tec-infos div h3 {
+    font-size: clamp(10px + 1vw, 1vw, 2vw);
+    color: var(--texto-color-sub);
+}
+
+.box-tec-frem .box-tec-infos div button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 20px;
+    border-radius: 50%;
+    background: var(--bg-color-line);
+    font-size: 20px;
+    color: var(--bg-color-main-sub);
+    transition: all 0.3s ease;
+}
+
+
+.box-tec-frem .box-tec-infos div button:hover {
+    transition: all 0.3s ease;
+    transform: scale(0.95);
+    box-shadow: 0 0 3px var(--bg-color-main-sub);
+}
+
+
+
+.box-tec-frem .box-frames {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-top: 25px;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+.box-tec-frem .box-frames::-webkit-scrollbar {
+    display: none;
+}
+
+.box-frames .circle-tecs {
+    min-width: 100px;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+    background: var(--tach-bg-card);
+    border: 2px solid var(--bg-color-line);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
+}
+
+.box-frames .circle-tecs img {
+    width: 50px;
+}
+
+.box-frames .circle-tecs #name-tecs {
+    color: var(--texto-color-main);
+    font-size: var(--font-sub-title);
+    font-weight: 600;
+}
+
+.box-frames .circle-tecs button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color-line);
+    color: var(--texto-color-main);
+    font-size: var(--font-sub-title);
+
+    border: none;
+    padding: 9px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+}
+
+.box-frames .circle-tecs button:hover {
+    transition: all 0.3s ease;
+    transform: scale(0.95);
+    box-shadow: 0 0 3px var(--bg-color-main-sub);
+}
+
+/* borda sobre as teconologias */
+/* .box-Tool {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    background: #241845;
+    padding: 19px;
+    border-radius: 10px;
+}
+
+
+.box-Tool .box-Tool-infos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+
+.box-Tool .box-Tool-infos span {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 10px;
+    background: #4b3a7a;
+}
+
+.box-Tool .box-Tool-frames {
+    width: 100%;
+    padding: 15px 0;
+} */
+/* 
+====================================
+============= (STATUS) =============
+====================================
+*/
+
+#Habilidade-status {
+    opacity: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(5, 11, 28, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+#Habilidade-status.ok {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.conteiner-stats {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    border-radius: 20px;
+    background: var(--card-bg-color);
+    border: 1px solid var(--bg-color-line);
+    transform: scale(0.80);
+    transition: var(--anime-transition);
+}
+
+.conteiner-stats.Efects {
+    transform: scale(1);
+}
+
+.box-header-st {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box-header-st .hed-st-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.box-header-st .hed-st-main img {
+    width: 60px;
+}
+
+.box-header-st .hed-st-main div h3 {
+    font-family: "Teko", sans-serif;
+    font-size: var(--font-card-title);
+    color: var(--texto-color-main);
+}
+
+.box-header-st .hed-st-main div p {
+    font-size: var(--font-card-sup);
+    color: var(--texto-color-sub);
+}
+
+
+.box-header-st button {
+    background: var(--card-bg-color);
+    padding: 10px;
+    border: 1px solid var(--bg-color-line);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.box-header-st button:hover {
+    background: var(--bg-color-main-sub);
+    border: 1px solid var(--bg-color-main-sub);
+    color: var(--texto-color-rev);
+    transition: 0.3s;
+    transform: scale(0.92);
+}
+
+.box-st-indos {
+    display: flex;
+    align-items: start;
+    padding: 20px;
+    gap: 15px;
+    background: var(--tach-bg-card);
+    border: 2px solid var(--bg-color-line);
+    border-radius: 10px;
+}
+
+.box-st-indos span {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 50%;
+    background: var(--bg-color-line);
+    border: 1px solid var(--bg-color-line2);
+    color: var(--bg-color-main-sub);
+}
+
+.box-st-indos div h4 {
+    font-size: var(--font-title);
+    margin-bottom: 10px;
+}
+
+.box-st-indos div .text-experi-st {
+    width: 100%;
+    height: 160px;
+    overflow-y: auto;
+    z-index: 1000;
+    scrollbar-color: var(--color-principal) transparent;
+}
+
+.box-st-indos div .text-experi-st p {
+    font-size: var(--font-title);
+    color: var(--texto-color-sub);
+    margin-right: 5px;
+}
+
+.box-fookes-st {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.box-fookes-st .box-status-st {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding: 10px;
+    background: var(--tach-bg-card);
+    border: 2px solid var(--bg-color-line);
+    border-radius: 10px;
+}
+.incon-st {
+    background: var(--bg-color-line);
+    font-size: var(--font-sub-title);
+    border: 1px solid var(--bg-color-line2);
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--bg-color-main-sub);
+}
+.box-fookes-st h4 {
+    color: var(--texto-color-sub);
+    font-size: 15px;
+}
+
+.box-fookes-st p {
+    font-size: 12px;
 }

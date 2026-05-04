@@ -150,7 +150,7 @@
    Estilização do Home com comportamento responsivo.
    Inclui menu desktop, mobile e ajustes de layout.
 */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 644px) {
     #Sobre .conteiner-sobre {
         margin: 0;
         width: 100%;
@@ -181,4 +181,26 @@
     }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {}
+@media (max-width: 896px) and (orientation: landscape) {
+    #Sobre .conteiner-sobre {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        padding: 0 15px;
+        gap: 30px;
+    }
+
+    #Sobre .conteiner-sobre .box-history div {
+        margin-top: 10px;
+        max-height: 100px;
+        overflow-y: auto;
+        z-index: 1000;
+        scrollbar-color: var(--color-principal) transparent;
+    }
+
+
+    #Sobre .conteiner-sobre .box-img {
+        width: 100%;
+        max-width: 50vh;
+    }
+}
