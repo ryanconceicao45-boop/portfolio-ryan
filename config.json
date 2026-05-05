@@ -12,7 +12,8 @@
       "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
       "inicio": "01/02/2026",
       "nivel": "Intermediário",
-      "foco": "Front-end Acessível"
+      "foco": "Front-end Acessível",
+      "filtro": "#e96417"
     },
     {
       "id": 1,
@@ -21,7 +22,8 @@
       "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
       "inicio": "05/02/2026",
       "nivel": "Intermediário",
-      "foco": "Front-end Acessível"
+      "foco": "Front-end Acessível",
+      "filtro": "#1784e9"
     },
     {
       "id": 2,
@@ -30,8 +32,47 @@
       "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
       "inicio": "05/02/2026",
       "nivel": "Intermediário",
-      "foco": "Front-end Acessível"
+      "foco": "Front-end Acessível",
+      "filtro": "#e9c317"
+    },
+    {
+      "id": 3,
+      "img": "icon-lua.png",
+      "Nome": ".Lua",
+      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
+      "inicio": "05/10/2023",
+      "nivel": "Intermediário",
+      "foco": "Front-end Acessível",
+      "filtro": "#4188e5"
+    },
+    {
+      "id": 4,
+      "img": "icon-node.png",
+      "Nome": "Node.Js",
+      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
+      "inicio": "05/10/2023",
+      "nivel": "Intermediário",
+      "foco": "Front-end Acessível",
+      "filtro": "#61cc67"
     }
+  ],
+  "Ferramentas": [
+    {"img": "icon-canva.webp", "Nome": "Canva"},
+    {"img": "icon-chatgpt.png", "Nome": "ChatGPT"},
+    {"img": "icon-claud.webp", "Nome": "Claud"},
+    {"img": "icon-discord.png", "Nome": "Discord"},
+    {"img": "icon-figma.webp", "Nome": "Figma"},
+    {"img": "icon-gemini.png", "Nome": "Gemini"},
+    {"img": "icon-git.png", "Nome": "Git"},
+    {"img": "icon-github.png", "Nome": "GitHub"},
+    {"img": "icon-notion.png", "Nome": "Notion"},
+    {"img": "icon-pacoteOffice.webp", "Nome": "Pacote Office"},
+    {"img": "icon-perplexity.webp", "Nome": "Perplexity"},
+    {"img": "icon-photoom.png", "Nome": "Photoom"},
+    {"img": "icon-pinterest.png", "Nome": "Pinterest"},
+    {"img": "icon-ps.png", "Nome": "Photoshop"},
+    {"img": "icon-vscode.png", "Nome": "VS Code"}
+    
   ],
   "Projetos": [
     {

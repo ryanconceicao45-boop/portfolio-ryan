@@ -39,6 +39,7 @@ async function LoadPage() {
 LoadPage()
 
 const conteiner = document.querySelector(".box-frames")
+const conteiner2 = document.querySelector(".bo-Tool")
 
 async function LoadTechStack() {
     const response = await consutJson()
@@ -57,8 +58,26 @@ async function LoadTechStack() {
         item.appendChild(button)
         conteiner.appendChild(item);
     })
+    Object.values(response.Ferramentas).forEach(dados => {
+        const item = document.createElement('div')
+        item.classList.add('box-ferramentas')
+        item.innerHTML = `
+            <img src="./assets/img/tools/${dados.img}" alt="">
+            <p>${dados.Nome}</p>
+        `
+        conteiner2.appendChild(item);
+    })
 
+    window.requestAnimationFrame(() => {
+        const frame = conteiner2.parentElement;
+        const distance = conteiner2.scrollWidth - frame.clientWidth;
+        if (distance > 0) {
+            conteiner2.style.setProperty('--scroll-distance', `-${distance}px`);
+        }
+        toggleNavButtons();
+    });
 }
+LoadTechStack()
 
 const hoverPageSaber = document.querySelector('.conteiner-stats')
 const CardSaiba = document.getElementById('Habilidade-status')
@@ -66,21 +85,21 @@ const CardSaiba = document.getElementById('Habilidade-status')
 function PageSaber(button) {
     hoverPageSaber.classList.add('Efects')
     CardSaiba.classList.add('ok')
-
     const dados = JSON.parse(button.getAttribute('data-tec'));
-    const textMain =  document.getElementById('h3-tecs-st')
-    const ImgMain =  document.getElementById('img-tecs-st')
+    const textMain = document.getElementById('h3-tecs-st')
+    const ImgMain = document.getElementById('img-tecs-st')
     const destMain = document.getElementById('text-scrip-st')
     const dateMain = document.getElementById('date-st')
     const niverMain = document.getElementById('niver-st')
     const focusMain = document.getElementById('focus-st')
-
+    const colorMain = document.querySelectorAll('.incon-st')
     textMain.innerHTML = dados.Nome
     ImgMain.src = `./assets/img/icons/${dados.img}`
     destMain.innerHTML = dados.descricao
     dateMain.innerHTML = dados.inicio
     niverMain.innerHTML = dados.nivel
     focusMain.innerHTML = dados.foco
+    colorMain.forEach(el => el.style.color = dados.filtro)
 }
 
 function removeSaber() {
@@ -90,16 +109,35 @@ function removeSaber() {
 
 
 
-document.querySelector(".next").onclick = () => {
+const btnNext = document.querySelector(".next");
+const btnPrev = document.querySelector(".prev");
+
+function toggleNavButtons() {
+    const hasOverflow = conteiner.scrollWidth > conteiner.clientWidth;
+    
+    if (hasOverflow) {
+        btnNext.style.display = "flex";
+        btnPrev.style.display = "flex";
+    } else {
+        btnNext.style.display = "none";
+        btnPrev.style.display = "none";
+    }
+}
+
+btnNext.onclick = () => {
     conteiner.scrollBy({ left: 200, behavior: "smooth" });
 };
 
-document.querySelector(".prev").onclick = () => {
+btnPrev.onclick = () => {
     conteiner.scrollBy({ left: -200, behavior: "smooth" });
 };
-LoadTechStack()
 
-const elementos = document.querySelectorAll('.box-left-Inicio, .img-avatar-v, .img-avatar-p, .box-history, .box-redes-sociais, .box-bnt-CV, .conteiner-hab')
+// Verificar após carregar os cards
+window.addEventListener('load', toggleNavButtons);
+window.addEventListener('resize', toggleNavButtons);
+
+
+const elementos = document.querySelectorAll('.box-left-Inicio, .img-avatar-v, .img-avatar-p, .box-history, .box-redes-sociais, .box-bnt-CV, .box-heder-hab, .box-tec-frem, .box-Tool')
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

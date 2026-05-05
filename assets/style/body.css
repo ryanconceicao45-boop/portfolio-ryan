@@ -395,34 +395,25 @@
 
 /* 
 ====================================
-============= (Habilidade) ==============
+========== (Habilidade) ============
 ====================================
 */
 #Habilidade {
     position: relative;
     top: var(--spacing-header);
-    background: #080f22;
+    background: #050c20;
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 0 20px 70px 20px;
 }
 
 .conteiner-hab {
     margin: 0 auto;
     width: 100%;
     max-width: 1100px;
-    height: calc(120vh - var(--spacing-header));
     display: flex;
     flex-direction: column;
     gap: 30px;
-    opacity: var(--anime-opacity);
-    transform: var(--anime-transform);
-    transition: var(--anime-transition);
-}
-
-.conteiner-hab.show {
-    opacity: var(--anime-hover-opacity);
-    transform: var(--anime-hover-transition);
 }
 
 .box-heder-hab {
@@ -431,6 +422,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+.box-heder-hab.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 .box-heder-hab .box-infos-hab {
@@ -455,16 +453,25 @@
 }
 
 
-/* borda sobre as teconologias */
+/* 
+==============
+TECNOLNOLOGIAS
+==============
+*/
 .box-tec-frem {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background: var(--tach-bg);
-    border: 1px solid var(--bg-color-line);
-    padding: 19px;
     border-radius: 10px;
-    overflow: hidden;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+
+.box-tec-frem.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 .box-tec-frem .box-tec-infos {
@@ -498,34 +505,31 @@
 }
 
 .box-tec-frem .box-tec-infos div button {
-    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
     gap: 20px;
     border-radius: 50%;
-    background: var(--bg-color-line);
+    background: var(--tach-bg-card);
     font-size: 20px;
     color: var(--bg-color-main-sub);
     transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--bg-color-line);
 }
-
 
 .box-tec-frem .box-tec-infos div button:hover {
-    transition: all 0.3s ease;
-    transform: scale(0.95);
-    box-shadow: 0 0 3px var(--bg-color-main-sub);
+    transform: scale(0.90);
+    border: 1px solid var(--bg-color-line);
 }
-
-
 
 .box-tec-frem .box-frames {
     display: flex;
     gap: 16px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding-top: 25px;
+    padding-top: 10px;
     width: 100%;
     scroll-snap-type: x mandatory;
 }
@@ -551,6 +555,7 @@
 
 .box-frames .circle-tecs img {
     width: 50px;
+    border-radius: 12px;
 }
 
 .box-frames .circle-tecs #name-tecs {
@@ -581,20 +586,25 @@
     box-shadow: 0 0 3px var(--bg-color-main-sub);
 }
 
-/* borda sobre as teconologias */
-/* .box-Tool {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
+/* 
+==============
+FERRAMENTAS DE DEV
+==============
+*/
+.box-Tool {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: left;
-    background: #241845;
-    padding: 19px;
+    gap: 10px;
     border-radius: 10px;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
 }
 
+.box-Tool.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
+}
 
 .box-Tool .box-Tool-infos {
     display: flex;
@@ -610,13 +620,60 @@
     padding: 10px;
     gap: 20px;
     border-radius: 10px;
-    background: #4b3a7a;
+    background: var(--bg-color-line);
+    color: var(--bg-color-main-sub);
 }
 
 .box-Tool .box-Tool-frames {
     width: 100%;
     padding: 15px 0;
-} */
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+}
+
+
+.box-Tool .box-Tool-frames .bo-Tool {
+    width: max-content;
+    display: flex;
+    animation: scrollIcons 10s linear infinite alternate;
+    gap: 10px;
+}
+
+@keyframes scrollIcons {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(var(--scroll-distance, -100%));
+    }
+}
+
+.box-Tool .box-ferramentas {
+    background: var(--tach-bg-card);
+    padding: 10px 5px;
+    width: 100%;
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--bg-color-line);
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.box-Tool .box-ferramentas img {
+    width: 40px;
+}
+
+.box-Tool .box-ferramentas p {
+    font-size: var(--font-sub-title);
+}
+
 /* 
 ====================================
 ============= (STATUS) =============
@@ -768,6 +825,7 @@
     border: 2px solid var(--bg-color-line);
     border-radius: 10px;
 }
+
 .incon-st {
     background: var(--bg-color-line);
     font-size: var(--font-sub-title);
@@ -776,6 +834,7 @@
     border-radius: 50%;
     color: var(--bg-color-main-sub);
 }
+
 .box-fookes-st h4 {
     color: var(--texto-color-sub);
     font-size: 15px;
@@ -783,4 +842,33 @@
 
 .box-fookes-st p {
     font-size: 12px;
+}
+
+
+/* 
+====================================
+=========== (CONTATO) ==============
+====================================
+*/
+#Contato {
+    position: relative;
+    top: var(--spacing-header);
+    background: #7294f4;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 
+====================================
+=========== (Rodape) ==============
+====================================
+*/
+#rodape {
+    background: #84ff7b;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 20vh;
 }

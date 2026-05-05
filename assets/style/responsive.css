@@ -204,3 +204,30 @@
         max-width: 50vh;
     }
 }
+
+
+/* 
+   SOBRE:
+   Estilização do Home com comportamento responsivo.
+   Inclui menu desktop, mobile e ajustes de layout.
+*/
+@media screen and (max-width: 700px) {
+    .box-fookes-st {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+    .box-fookes-st {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .box-st-indos div .text-experi-st {
+        width: 100%;
+        height: 60px;
+        overflow-y: auto;
+        z-index: 1000;
+        scrollbar-color: var(--color-principal) transparent;
+    }
+}
