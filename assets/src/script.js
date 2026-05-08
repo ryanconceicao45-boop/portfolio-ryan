@@ -1,3 +1,7 @@
+// =======================================
+// ===========( BARRA DE MENU )===========
+// =======================================
+
 const menu = document.querySelector('.box-navegacao')
 const btn_menu = document.querySelector('.menu-btn')
 function openMenu() {
@@ -9,6 +13,7 @@ function openMenu() {
         btn_menu.classList.remove('active-btn')
     }
 }
+
 function closeMenu() {
     if (menu.classList.contains('active') && btn_menu.classList.contains('active-btn')) {
         menu.classList.remove('active')
@@ -16,136 +21,217 @@ function closeMenu() {
     }
 }
 
-
+// =======================================
+// ======( CARREGAR DADOS DO JSON )=======
+// =======================================
 async function consutJson() {
     const response = await fetch("/config.json");
     const dadoss = await response.json();
     return dadoss;
 }
 
-async function LoadPage() {
+const debounce = (fn, delay = 200) => {
+    let timeoutId;
+    return (...args) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            fn(...args);
+        }, delay);
+    };
+};
+// =======================================
+// ===========( TEXT INICIAL )============
+// =======================================
+const descrip = document.querySelector('.p-descript')
+const h1 = document.querySelector('h1')
+const disp = document.querySelector('.box-oportunidade')
+
+async function loadTextPage() {
     try {
         const response = await consutJson()
-        const descrip = await document.querySelector('.p-descript')
-        const h1 = await document.querySelector('h1')
-        const disp = await document.querySelector('.box-oportunidade')
-        descrip.innerHTML = response.Principal.descricao
-        h1.innerHTML = response.Principal.titulo
-        disp.innerHTML = response.Principal.available
+        const { titulo, descricao, available } = response.Principal
+        h1.innerHTML = titulo
+        descrip.textContent = descricao
+        disp.innerHTML = available
     } catch (error) {
-        console.error("Erro ao carregar JSON:", error)
+        console.error('Error ao carregas os nomes')
     }
+
 }
-LoadPage()
+loadTextPage()
+
+// =======================================
+// ===========( TEXT INICIAL )============
+// =======================================
 
 const conteiner = document.querySelector(".box-frames")
-const conteiner2 = document.querySelector(".bo-Tool")
+const btnNext = document.querySelector(".next");
+const btnPrev = document.querySelector(".prev");
+
+// Dados dados que vai criar os cards
+const criarCardTecnologia = (tecs) => {
+    const item = document.createElement('div')
+    item.classList.add('circle-tecs')
+
+    item.innerHTML = `
+        <img src="./assets/img/icons/${tecs.img}" alt="">
+        <p id="name-tecs">${tecs.Nome}</p>
+    `
+    const button = document.createElement('button')
+    button.classList.add('name-tecs-btn')
+    button.setAttribute('data-tec', JSON.stringify(tecs))
+    button.textContent = 'Saiba Mais'
+
+    button.addEventListener('click', () => exibirDetalhesTeck(button))
+    item.appendChild(button);
+    return item
+}
 
 async function LoadTechStack() {
-    const response = await consutJson()
-    Object.values(response.Habilidades).forEach(tecs => {
-        const item = document.createElement('div')
-        item.classList.add('circle-tecs')
-        item.innerHTML = `
-            <img src="./assets/img/icons/${tecs.img}" alt="">
-            <p id="name-tecs">${tecs.Nome}</p>
-        `
-        const button = document.createElement('button')
-        button.classList.add('name-tecs-btn')
-        button.setAttribute('data-tec', JSON.stringify(tecs))
-        button.textContent = 'Saiba Mais'
-        button.onclick = () => PageSaber(button)
-        item.appendChild(button)
-        conteiner.appendChild(item);
-    })
-    Object.values(response.Ferramentas).forEach(dados => {
-        const item = document.createElement('div')
-        item.classList.add('box-ferramentas')
-        item.innerHTML = `
-            <img src="./assets/img/tools/${dados.img}" alt="">
-            <p>${dados.Nome}</p>
-        `
-        conteiner2.appendChild(item);
-    })
+    try {
+        const response = await consutJson()
+        const fragment = document.createDocumentFragment()
 
-    window.requestAnimationFrame(() => {
-        const frame = conteiner2.parentElement;
-        const distance = conteiner2.scrollWidth - frame.clientWidth;
-        if (distance > 0) {
-            conteiner2.style.setProperty('--scroll-distance', `-${distance}px`);
-        }
+        response.Habilidades.forEach(tecs => {
+            const card = criarCardTecnologia(tecs)
+            fragment.appendChild(card);
+        })
+        conteiner.appendChild(fragment)
+
         toggleNavButtons();
-    });
+    } catch (error) {
+        console.error('Error ao carregar os dados de tech.')
+    }
 }
 LoadTechStack()
+
+function toggleNavButtons() {
+    const hasOverflow = conteiner.scrollWidth > conteiner.clientWidth;
+    btnNext.style.display = hasOverflow ? "flex" : "none";
+    btnPrev.style.display = hasOverflow ? "flex" : "none";
+}
+
+btnNext.addEventListener('click', () => {
+    conteiner.scrollBy({ left: 200, behavior: "smooth" });
+})
+
+btnPrev.addEventListener('click', () => {
+    conteiner.scrollBy({ left: -200, behavior: "smooth" });
+})
+
+window.addEventListener('load', toggleNavButtons);
+window.addEventListener('resize', debounce(toggleNavButtons, 200));
+
+// =======================================
+// =========( LOAD ANIME TOOLS )==========
+// =======================================
+const conteinerTools = document.querySelector(".bo-Tool")
+
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+async function LoadTools() {
+    try {
+        const response = await consutJson();
+        const ferramentas = response.Ferramentas;
+        const timeValue = 190
+        for (const dados of ferramentas) {
+            const item = document.createElement('div');
+            item.classList.add('box-ferramentas');
+            item.innerHTML = `
+                <img src="./assets/img/tools/${dados.img}" alt="${dados.Nome}">
+                <p>${dados.Nome}</p>
+            `;
+            conteinerTools.appendChild(item);
+            await delay(timeValue);
+            item.style.transition = '2s'
+            item.style.opacity = '1'
+        }
+        const FinalizedDelay = delay(timeValue)
+        if (FinalizedDelay) {
+            console.log(conteinerTools)
+            conteinerTools.style.animation = 'scrollIcons 10s linear infinite alternate'
+            window.requestAnimationFrame(() => {
+                const frame = conteinerTools.parentElement;
+                const distance = conteinerTools.scrollWidth - frame.clientWidth;
+                if (distance > 0) {
+                    conteinerTools.style.setProperty('--scroll-distance', `-${distance}px`);
+                }
+            });
+        }
+    } catch (error) {
+        console.error('Erro ao carregar ferramentas:', error);
+    }
+}
+
+LoadTools();
+
+// =======================================
+// ==========( CARD TECNOLOGIA )==========
+// =======================================
 
 const hoverPageSaber = document.querySelector('.conteiner-stats')
 const CardSaiba = document.getElementById('Habilidade-status')
 
-function PageSaber(button) {
+const textMain = document.getElementById('h3-tecs-st')
+const ImgMain = document.getElementById('img-tecs-st')
+const descricaoMain = document.getElementById('text-scrip-st')
+const dateMain = document.getElementById('date-st')
+const niverMain = document.getElementById('niver-st')
+const focusMain = document.getElementById('focus-st')
+const icons = document.querySelectorAll('.incon-st')
+const scrol = document.querySelector('.text-experi-st')
+const aplicatEstilo = (color) => {
+    icons.forEach(el => el.style.color = color)
+}
+
+const exibirDetalhesTeck = (button) => {
     hoverPageSaber.classList.add('Efects')
     CardSaiba.classList.add('ok')
+
+    // Pega os dados que está nesse atributo
     const dados = JSON.parse(button.getAttribute('data-tec'));
-    const textMain = document.getElementById('h3-tecs-st')
-    const ImgMain = document.getElementById('img-tecs-st')
-    const destMain = document.getElementById('text-scrip-st')
-    const dateMain = document.getElementById('date-st')
-    const niverMain = document.getElementById('niver-st')
-    const focusMain = document.getElementById('focus-st')
-    const colorMain = document.querySelectorAll('.incon-st')
-    textMain.innerHTML = dados.Nome
-    ImgMain.src = `./assets/img/icons/${dados.img}`
-    destMain.innerHTML = dados.descricao
-    dateMain.innerHTML = dados.inicio
-    niverMain.innerHTML = dados.nivel
-    focusMain.innerHTML = dados.foco
-    colorMain.forEach(el => el.style.color = dados.filtro)
+    const { Nome, img, descricao, inicio, nivel, foco, filtro } = dados
+
+    textMain.textContent = Nome
+    ImgMain.src = `./assets/img/icons/${img}`
+    descricaoMain.innerHTML = descricao
+    dateMain.textContent = inicio
+    niverMain.textContent = nivel
+    focusMain.textContent = foco
+    
+    aplicatEstilo(filtro) 
+
+    document.body.style.overflow = 'hidden'; // Desabilita scroll
+    scrol.style.overflowY = 'auto';
+    scrol.style.scrollbarColor = 'var(--color-principal) transparent';
 }
 
-function removeSaber() {
+const removeSaber = () => {
     hoverPageSaber.classList.remove('Efects')
     CardSaiba.classList.remove('ok')
+    document.body.style.overflow = 'auto'; // Habilita scroll
 }
 
+// =======================================
+// ==========( HOVER DO SITE )============
+// =======================================
 
+const elementsToObserve = document.querySelectorAll(`
+    .box-left-Inicio, 
+    .img-avatar-v, 
+    .conteiner-sobre,
+    .box-heder-hab, 
+    .box-tec-frem
+`)
 
-const btnNext = document.querySelector(".next");
-const btnPrev = document.querySelector(".prev");
+const observerOptions = { threshold: 0.2 };
 
-function toggleNavButtons() {
-    const hasOverflow = conteiner.scrollWidth > conteiner.clientWidth;
-    
-    if (hasOverflow) {
-        btnNext.style.display = "flex";
-        btnPrev.style.display = "flex";
-    } else {
-        btnNext.style.display = "none";
-        btnPrev.style.display = "none";
+const observer = new IntersectionObserver((entries, observerInstance) => {
+    for (const entry of entries) {
+        entry.isIntersecting = entry.isIntersecting ? entry.target.classList.add('show') : entry.target.classList.remove('show');
     }
+}, observerOptions);
+
+for (const element of elementsToObserve) {
+    observer.observe(element);
 }
-
-btnNext.onclick = () => {
-    conteiner.scrollBy({ left: 200, behavior: "smooth" });
-};
-
-btnPrev.onclick = () => {
-    conteiner.scrollBy({ left: -200, behavior: "smooth" });
-};
-
-// Verificar após carregar os cards
-window.addEventListener('load', toggleNavButtons);
-window.addEventListener('resize', toggleNavButtons);
-
-
-const elementos = document.querySelectorAll('.box-left-Inicio, .img-avatar-v, .img-avatar-p, .box-history, .box-redes-sociais, .box-bnt-CV, .box-heder-hab, .box-tec-frem, .box-Tool')
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, {
-    threshold: 0.2
-});
-/* ativa o observer em cada card */
-elementos.forEach(efect => observer.observe(efect));

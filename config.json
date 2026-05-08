@@ -1,7 +1,7 @@
 {
   "Principal": {
-    "titulo": "DESENVOLVEDOR <span>FULL STACK</span>",
-    "descricao": "Especializado no desenvolvimento de aplicações eficientes e escaláveis, com foco em qualidade de código, performance e entrega de soluções que agregam valor ao negócio.",
+    "titulo": "RYAN DA <span>CONCEIÇÃO</span>",
+    "descricao": "Desenvolvedor Full Stack especializado no desenvolvimento de aplicações eficientes e escaláveis, com foco em qualidade de código, performance e entrega de soluções que agregam valor ao negócio.",
     "available": "<span>•</span>Disponível para novas oportunidades"
   },
   "Habilidades": [
@@ -9,7 +9,7 @@
       "id": 0,
       "img": "icon-html.png",
       "Nome": "HTML5",
-      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
+      "descricao": "Essa foi a primeira tecnologia que estudei no início da minha trajetória como desenvolvedor: o HTML. Como toda pessoa em começo de carreira, comecei pela base, entendendo a estrutura da web e como os conteúdos são organizados. <br><br> Durante meu processo de aprendizado, tive bastante facilidade em compreender a linguagem de marcação, evoluindo rapidamente nos conceitos fundamentais. Em cerca de duas semanas, já dominava estruturação de páginas, uso correto de tags semânticas e boas práticas para construção de layouts organizados e acessíveis. <br><br> Esse aprendizado foi essencial para desenvolver uma visão sólida sobre como criar projetos bem estruturados desde o início, pensando não apenas na aparência, mas também na organização, legibilidade e manutenção do código. <br><br> Foi uma experiência muito positiva, que despertou ainda mais meu interesse pela área e fortaleceu minha base para evoluir em tecnologias mais avançadas.",
       "inicio": "01/02/2026",
       "nivel": "Intermediário",
       "foco": "Front-end Acessível",
@@ -19,8 +19,8 @@
       "id": 1,
       "img": "icon-css.png",
       "Nome": "CSS3",
-      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
-      "inicio": "05/02/2026",
+      "descricao": "Essa foi uma das tecnologias que mais contribuiu para minha evolução no desenvolvimento front-end: o CSS3. Após aprender a estruturação com HTML, comecei a estudar estilização e criação de interfaces modernas, entendendo como transformar uma página simples em uma experiência visual organizada e profissional.<br><br>Durante meus estudos, tive facilidade em compreender os conceitos de estilização, responsividade e organização visual. Em pouco tempo, já conseguia desenvolver layouts modernos, trabalhar com Flexbox, posicionamento de elementos, animações, efeitos visuais e adaptação para diferentes tamanhos de tela.<br><br>O CSS3 me ajudou a desenvolver uma visão mais criativa e estratégica sobre design e experiência do usuário, sempre buscando criar interfaces bonitas, funcionais e bem estruturadas.<br><br>Foi um aprendizado muito importante na minha trajetória, porque além de melhorar minhas habilidades técnicas, também aumentou minha atenção aos detalhes e à qualidade visual dos projetos que desenvolvo.",
+      "inicio": "28/02/2026",
       "nivel": "Intermediário",
       "foco": "Front-end Acessível",
       "filtro": "#1784e9"
@@ -38,9 +38,9 @@
     {
       "id": 3,
       "img": "icon-lua.png",
-      "Nome": ".Lua",
-      "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
-      "inicio": "05/10/2023",
+      "Nome": "Lua",
+      "descricao": "A linguagem Lua foi uma das tecnologias mais importantes da minha trajetória como desenvolvedor, principalmente por ter sido através dela que desenvolvi minha lógica de programação e minha forma de resolver problemas.<br><br>Utilizei Lua no desenvolvimento de scripts para servidores de MTA:SA (Multi Theft Auto), criando sistemas personalizados, interfaces, mecânicas de jogo e funcionalidades voltadas para desempenho, organização e experiência dos jogadores.<br><br>Durante esse processo, aprendi na prática conceitos fundamentais da programação, como estruturas condicionais, loops, funções, tabelas, eventos, organização de código e otimização de sistemas em tempo real. Foi uma experiência extremamente importante para minha evolução técnica, pois me permitiu sair da teoria e aplicar soluções diretamente em projetos reais.<br><br>Além do desenvolvimento de funcionalidades, também adquiri experiência com performance, segurança de scripts e criação de sistemas escaláveis para servidores com muitos jogadores simultâneos, o que contribuiu bastante para fortalecer minha capacidade de análise e resolução de problemas.<br><br>Foi através da linguagem Lua e do ambiente de desenvolvimento do MTA:SA que construí uma base sólida de lógica de programação, disciplina no desenvolvimento e paixão pela criação de sistemas.",
+      "inicio": "01/05/2021",
       "nivel": "Intermediário",
       "foco": "Front-end Acessível",
       "filtro": "#4188e5"
@@ -48,7 +48,7 @@
     {
       "id": 4,
       "img": "icon-node.png",
-      "Nome": "Node.Js",
+      "Nome": "Node",
       "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
       "inicio": "05/10/2023",
       "nivel": "Intermediário",
@@ -58,25 +58,22 @@
   ],
   "Ferramentas": [
     {"img": "icon-canva.webp", "Nome": "Canva"},
+    {"img": "icon-figma.webp", "Nome": "Figma"},
+    {"img": "icon-photoom.png", "Nome": "Photoom"},
+    {"img": "icon-ps.png", "Nome": "Photoshop"},
     {"img": "icon-chatgpt.png", "Nome": "ChatGPT"},
     {"img": "icon-claud.webp", "Nome": "Claud"},
-    {"img": "icon-discord.png", "Nome": "Discord"},
-    {"img": "icon-figma.webp", "Nome": "Figma"},
     {"img": "icon-gemini.png", "Nome": "Gemini"},
+    {"img": "icon-perplexity.webp", "Nome": "Perplexity"},
     {"img": "icon-git.png", "Nome": "Git"},
     {"img": "icon-github.png", "Nome": "GitHub"},
+    {"img": "icon-vscode.png", "Nome": "VS Code"},
     {"img": "icon-notion.png", "Nome": "Notion"},
-    {"img": "icon-pacoteOffice.webp", "Nome": "Pacote Office"},
-    {"img": "icon-perplexity.webp", "Nome": "Perplexity"},
-    {"img": "icon-photoom.png", "Nome": "Photoom"},
-    {"img": "icon-pinterest.png", "Nome": "Pinterest"},
-    {"img": "icon-ps.png", "Nome": "Photoshop"},
-    {"img": "icon-vscode.png", "Nome": "VS Code"}
-    
+    {"img": "icon-pacoteOffice.webp", "Nome": "Pacote Office"}
   ],
   "Projetos": [
     {
-      "id": 0,
+      "id": 1,
       "titulo": "Calculadora",
       "data": "2026-04-15",
       "descricao": "Projeto que evidencia minha evolução prática, com ênfase em organização, clareza e escalabilidade do código.",
@@ -91,7 +88,7 @@
       "destaque": true
     },
     {
-      "id": 1,
+      "id": 2,
       "titulo": "Conversor Universal",
       "data": "2026-04-15",
       "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
