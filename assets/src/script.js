@@ -26,7 +26,7 @@ function closeMenu() {
 // ======( CARREGAR DADOS DO JSON )=======
 // =======================================
 async function consutJson() {
-    const response = await fetch("/config.json");
+    const response = await fetch("./config.json");
     const dadoss = await response.json();
     return dadoss;
 }
