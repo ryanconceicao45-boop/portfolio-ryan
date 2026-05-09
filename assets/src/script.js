@@ -26,7 +26,7 @@ function closeMenu() {
 // ======( CARREGAR DADOS DO JSON )=======
 // =======================================
 async function consutJson() {
-    const response = await fetch("config.json");
+    const response = await fetch("data.json");
     const dadoss = await response.json();
     return dadoss;
 }
@@ -243,7 +243,7 @@ async function closeAnimMain() {
     document.body.classList.remove('page-open')
     await delay(1000)
     closeMenu()
-    window.location.href = "./assets/page/page.html"
+    window.location.href = "assets/page/page.html"
 }
 btnMain.addEventListener('click', closeAnimMain)
 btnMain2.addEventListener('click', closeAnimMain)
