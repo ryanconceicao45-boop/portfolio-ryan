@@ -87,3 +87,16 @@ input.addEventListener('input', (e) => {
 });
 
 
+// const elemento = document.querySelectorAll("main, .box-header-pj")
+
+async function onclickPages() {
+    document.body.classList.add("page-close")
+    await delay(1200)
+    window.location.href = "/index.html"
+}
+
+window.addEventListener("load", async function() {
+    document.body.classList.remove("page-close")
+})
+
+

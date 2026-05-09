@@ -148,7 +148,6 @@ async function LoadTools() {
         }
         const FinalizedDelay = delay(timeValue)
         if (FinalizedDelay) {
-            console.log(conteinerTools)
             conteinerTools.style.animation = 'scrollIcons 10s linear infinite alternate'
             window.requestAnimationFrame(() => {
                 const frame = conteinerTools.parentElement;
@@ -198,12 +197,13 @@ const exibirDetalhesTeck = (button) => {
     dateMain.textContent = inicio
     niverMain.textContent = nivel
     focusMain.textContent = foco
-    
-    aplicatEstilo(filtro) 
+
+    aplicatEstilo(filtro)
 
     document.body.style.overflow = 'hidden'; // Desabilita scroll
     scrol.style.overflowY = 'auto';
-    scrol.style.scrollbarColor = 'var(--color-principal) transparent';
+    scrol.style.scrollbarColor = `${filtro}  transparent`;
+
 }
 
 const removeSaber = () => {
@@ -235,3 +235,31 @@ const observer = new IntersectionObserver((entries, observerInstance) => {
 for (const element of elementsToObserve) {
     observer.observe(element);
 }
+
+
+const btnMain = document.querySelector('.bnt-projetos')
+const btnMain2 = document.querySelector('.bnt-header-pj')
+
+
+export function activefuncao() {
+    console.log('Ola mundo')
+}
+
+async function closeAnimMain() {
+    document.body.classList.add('page-close')
+    document.body.classList.remove('page-open')
+    await delay(1000)
+    closeMenu()
+    // window.location.href = "/assets/page/page.html"
+}
+btnMain.addEventListener('click', closeAnimMain)
+btnMain2.addEventListener('click', closeAnimMain)
+
+function openAnimMain() {
+    document.body.classList.remove('page-close')
+    document.body.classList.add('page-open')
+}
+
+window.addEventListener("load", async function() {
+    openAnimMain()
+})
