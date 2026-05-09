@@ -86,17 +86,22 @@ input.addEventListener('input', (e) => {
     }
 });
 
+const btnMain = document.querySelector('.box-left-pj')
 
-// const elemento = document.querySelectorAll("main, .box-header-pj")
 
-async function onclickPages() {
-    document.body.classList.add("page-close")
-    await delay(1200)
+async function closeAnimMain() {
+    document.body.classList.add('page-close')
+    document.body.classList.remove('page-open')
+    await delay(1000)
     window.location.href = "/index.html"
+}
+btnMain.addEventListener('click', closeAnimMain)
+
+function openAnimMain() {
+    document.body.classList.remove('page-close')
+    document.body.classList.add('page-open')
 }
 
 window.addEventListener("load", async function() {
-    document.body.classList.remove("page-close")
+    openAnimMain()
 })
-
-

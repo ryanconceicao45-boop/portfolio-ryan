@@ -1,22 +1,15 @@
-.page-close {
-    transition: transform 2s ease, opacity 2s ease;
-    transform: translateX(-100vw);
-    opacity:0;
-    overflow: hidden;
-}
 
+
+/* entrada */
 .page-open{
-    transition: transform 2s ease, opacity 2s ease;
-    transform: translateX(0);
-    opacity: 1;
-    overflow: none;
+    transition: transform 1s ease, opacity 1s ease;
+    opacity:1;
 }
 
-body {
-    transition: transform 2s ease, opacity 2s ease;
-    transform: translateX(-100vw);
-    opacity: 1;
-    overflow: none;
+/* saída */
+.page-close{
+    transition: transform 1s ease, opacity 1s ease;
+    opacity:0;
 }
 
 #Inicio {
@@ -399,7 +392,7 @@ body {
 #Habilidade {
     position: relative;
     top: var(--spacing-header);
-    background: #050c20;
+    background: #040a22;
     display: flex;
     align-items: center;
     padding: 0 20px 70px 20px;
@@ -452,7 +445,7 @@ body {
 }
 
 .box-heder-hab .img-codes {
-    width: 30%;
+    width: 40%;
 }
 
 
@@ -563,7 +556,7 @@ TECNOLNOLOGIAS
 .box-frames .circle-tecs #name-tecs {
     color: var(--texto-color-main);
     font-size: var(--font-sub-title);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .box-frames .circle-tecs button {
@@ -635,7 +628,7 @@ FERRAMENTAS DE DEV
     left:-9px;
     width:13px;
     height:calc(100%);
-    background:#706dbd;
+    background:#3c3b64;
     filter:blur(3px);
     border-radius:50px;
     z-index: 100;
@@ -649,7 +642,7 @@ FERRAMENTAS DE DEV
     right:-9px;
     width:13px;
     height:calc(100%);
-    background:#706dbd;
+    background:#3c3b64;
     filter:blur(5px);
     border-radius:50px;
     z-index: 100;

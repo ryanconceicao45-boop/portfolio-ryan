@@ -1,15 +1,23 @@
 .page-close {
     transition: transform 1s ease, opacity 1s ease;
-    transform: scale(0.96);
+    transform: translateX(-100vw);
     opacity:0;
+    overflow: hidden;
 }
 
-.page-open {
+.page-open{
     transition: transform 1s ease, opacity 1s ease;
-    transform: scale(1);
-    opacity:1;
+    transform: none;
+    opacity: 1;
+    overflow: none;
 }
 
+body {
+    transition: transform 1s ease, opacity 1s ease;
+    transform: translateX(100vw);
+    opacity: 1;
+    overflow: none;
+}
 
 .body-geral {
     background: var(--bg-color-d-s);
@@ -341,4 +349,22 @@ main .cont-base {
 .cont-base .box-card-all .box-interation-pj .box-btn-pj a:hover {
     transition: 0.3s;
     transform: scale(0.96);
+}
+
+@media screen and (max-width: 1080px) {
+    main .cont-base {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main .cont-base {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
 }

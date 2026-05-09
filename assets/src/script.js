@@ -1,10 +1,11 @@
 // =======================================
 // ===========( BARRA DE MENU )===========
 // =======================================
+const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 const menu = document.querySelector('.box-navegacao')
 const btn_menu = document.querySelector('.menu-btn')
-function openMenu() {
+async function openMenu() {
     if (!menu.classList.contains('active') && !btn_menu.classList.contains('active-btn')) {
         menu.classList.add('active')
         btn_menu.classList.add('active-btn')
@@ -126,14 +127,11 @@ window.addEventListener('resize', debounce(toggleNavButtons, 200));
 // =========( LOAD ANIME TOOLS )==========
 // =======================================
 const conteinerTools = document.querySelector(".bo-Tool")
-
-const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
-
 async function LoadTools() {
     try {
         const response = await consutJson();
         const ferramentas = response.Ferramentas;
-        const timeValue = 190
+        const timeValue = 200
         for (const dados of ferramentas) {
             const item = document.createElement('div');
             item.classList.add('box-ferramentas');
@@ -240,26 +238,19 @@ for (const element of elementsToObserve) {
 const btnMain = document.querySelector('.bnt-projetos')
 const btnMain2 = document.querySelector('.bnt-header-pj')
 
-
-export function activefuncao() {
-    console.log('Ola mundo')
-}
-
 async function closeAnimMain() {
     document.body.classList.add('page-close')
     document.body.classList.remove('page-open')
     await delay(1000)
     closeMenu()
-    // window.location.href = "/assets/page/page.html"
+    window.location.href = "/assets/page/page.html"
 }
 btnMain.addEventListener('click', closeAnimMain)
 btnMain2.addEventListener('click', closeAnimMain)
 
-function openAnimMain() {
-    document.body.classList.remove('page-close')
-    document.body.classList.add('page-open')
-}
-
-window.addEventListener("load", async function() {
-    openAnimMain()
+window.addEventListener("load", async function () {
+    requestAnimationFrame(() => {
+        document.body.classList.remove('page-close')
+        document.body.classList.add('page-open')
+    })
 })

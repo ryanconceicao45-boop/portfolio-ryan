@@ -58,6 +58,7 @@ header nav .box-navegacao a {
     border-radius: 10px;
     padding: 5px 17px;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 header nav .box-navegacao a:hover {
