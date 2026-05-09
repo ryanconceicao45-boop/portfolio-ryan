@@ -129,7 +129,7 @@
       "titulo": "Calculadora",
       "data": "2026-04-15",
       "descricao": "Projeto que evidencia minha evolução prática, com ênfase em organização, clareza e escalabilidade do código.",
-      "imagem": "/assets/img/project/calculadora-1.png",
+      "imagem": "calculadora-1.png",
       "tecnologias": [
         "HTML",
         "CSS",
@@ -144,7 +144,7 @@
       "titulo": "Conversor Universal",
       "data": "2026-04-15",
       "descricao": "Aplicação web que realiza conversão de moedas de forma prática e dinâmica, utilizando API externa para garantir taxas atualizadas em tempo real.",
-      "imagem": "/assets/img/project/converty-2.png",
+      "imagem": "converty-2.png",
       "tecnologias": [
         "HTML",
         "CSS",

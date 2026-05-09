@@ -35,7 +35,7 @@ async function renderProjetos(projetos, activeDalay) {
             item.classList.add('box-card-all')
             item.innerHTML = `
                 <div class="box-top-pj">
-                    <img src="${dados.imagem}" alt="${dados.titulo}">
+                    <img src="../img/project/${dados.imagem}" alt="${dados.titulo}">
                     <h2>${dados.titulo}</h2>
                     <div class="box-prevision">
                         <span class="material-symbols-outlined">
