@@ -6,6 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: #ffffff;
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -25,6 +26,13 @@ input:focus {
     --bg-color-body: #040A17;
     --bg-color-line: #232e4b;
     --bg-color-line2: #3a4871;
+
+
+
+    --bg-color-ctt-Main: #050d24;
+    --bg-color-ctt-card: #060e25;
+    --Line-color-ctt-card: #1a224b;
+    --bg-color-ctt-input: #0f152e;
 
     --card-bg-color: #141b2c;
     
