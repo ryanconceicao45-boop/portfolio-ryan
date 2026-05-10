@@ -254,3 +254,47 @@ window.addEventListener("load", async function () {
         document.body.classList.add('page-open')
     })
 })
+
+
+// =======================================
+// =====( ENVIAR DADOS BACKEND CTT )======
+// =======================================
+const form = document.querySelector('#form-contato');
+
+form.addEventListener('submit', async (e) => {
+
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    const dados = {
+        nome: formData.get('nome'),
+        email: formData.get('email'),
+        mensagem: formData.get('mensagem')
+    };
+
+    try {
+
+        const response = await fetch('/contato', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dados)
+        });
+
+        const result = await response.text();
+
+        alert(result);
+
+        form.reset();
+
+    } catch (error) {
+
+        console.log(error);
+
+        alert('Erro ao enviar mensagem');
+
+    }
+
+});
