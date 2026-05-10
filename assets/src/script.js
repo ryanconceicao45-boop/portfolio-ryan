@@ -261,12 +261,28 @@ window.addEventListener("load", async function () {
 // =======================================
 
 const form = document.getElementById("formContato");
+const btnSubmit = document.getElementById("btn-submit");
 
 emailjs.init("KFZkdbvCLgh479DGw");
 
+const emailEnviar = localStorage.getItem("emailEnviado")
+
+if (emailEnviar) {
+
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = "Você já enviou uma mensagem";
+}
+
 form.addEventListener("submit", function(event) {
-    
+
     event.preventDefault();
+    
+
+    if (localStorage.getItem("emailEnviado")) {
+        return;
+    }
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = "Enviando...";
 
     emailjs.sendForm(
         "service_53rhv3p",
@@ -274,18 +290,15 @@ form.addEventListener("submit", function(event) {
         this
     )
     .then(() => {
-
-        alert("Mensagem enviada com sucesso!");
-
-        form.reset();
-
+        localStorage.setItem("emailEnviado", "true");
+        btnSubmit.textContent = "Mensagem enviada com sucesso!"
+        form.reset(); 
     })
     .catch((error) => {
-
         console.error("Erro:", error);
-
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = "Enviar mensagem →";
         alert("Erro ao enviar mensagem.");
-
     });
 
 });

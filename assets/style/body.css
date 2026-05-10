@@ -1034,19 +1034,19 @@ FERRAMENTAS DE DEV
     text-align: center;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    /* width: 200px; */
     padding: 10px 10px;
     background: var(--bg-color-main-sub);
     border: none;
     border-radius: 10px;
-    color: var(--texto-color-rev);
+    color: var(--texto-color-rev); 
     font-weight: 500;
     transition: all 0.1s ease;
     cursor: pointer;
 }
 
 .box-cc-2 .box-form button:active {
-    transform: translateX(5px);
+    transform: scale(0.98);
 }
 
 
