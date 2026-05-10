@@ -159,10 +159,11 @@
         margin: 0;
         width: 100%;
         display: flex;
+        height: auto;
         flex-wrap: wrap-reverse;
         justify-content: center;
         align-items: center;
-        padding: 0 15px;
+        padding: 15px 15px;
         gap: 20px;
         text-align: center;
     }

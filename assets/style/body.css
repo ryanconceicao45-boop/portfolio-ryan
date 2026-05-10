@@ -249,15 +249,13 @@
     top: var(--spacing-header);
     background: #050B1C;
     width: 100%;
-    height: calc(100vh - var(--spacing-header));
+    /* height: calc(100vh - var(--spacing-header)); */
     overflow: hidden;
     display: flex;
     align-content: center;
 }
 
 #Sobre .conteiner-sobre {
-    position: relative;
-    top: 0;
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
@@ -367,11 +365,10 @@
     gap: 5px;
     color: var(--texto-color-rev);
     font-weight: 500;
-    transition: 0.4s;
+    transition: all 0.4s ease;
 }
 
 #Sobre .conteiner-sobre .box-bnt-CV a:hover {
-    transition: 0.4s;
     transform: scale(0.97);
 }
 
@@ -619,34 +616,6 @@ FERRAMENTAS DE DEV
     gap: 10px;
     overflow: hidden;
 }
-
-.box-Tool .box-Tool-frames::before {
-    content: "";
-    position: absolute;
-    left: -9px;
-    width: 13px;
-    height: calc(100%);
-    background: #3c3b64;
-    filter: blur(3px);
-    border-radius: 50px;
-    z-index: 100;
-    animation: picsToonsBord 1s linear infinite;
-}
-
-/* brilho direito */
-.box-Tool .box-Tool-frames::after {
-    content: "";
-    position: absolute;
-    right: -9px;
-    width: 13px;
-    height: calc(100%);
-    background: #3c3b64;
-    filter: blur(5px);
-    border-radius: 50px;
-    z-index: 100;
-    animation: picsToonsBord 1s linear infinite;
-}
-
 
 @keyframes picsToonsBord {
     0% {
@@ -914,7 +883,6 @@ FERRAMENTAS DE DEV
     width: 100%;
     max-width: 500px;
     background: transparent;
-    padding: 20px;
 }
 
 .box-cc-1 .box-intro {
