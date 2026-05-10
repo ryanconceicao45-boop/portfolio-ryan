@@ -5,7 +5,7 @@ const timeValue = 200
 
 async function consultJson() {
     try {
-        const response = await fetch("../../data.json");
+        const response = await fetch("../../config.json");
         const dados = await response.json();
         return dados;
     } catch (error) {
