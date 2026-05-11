@@ -219,7 +219,10 @@ const elementsToObserve = document.querySelectorAll(`
     .img-avatar-v, 
     .conteiner-sobre,
     .box-heder-hab, 
-    .box-tec-frem
+    .box-tec-frem,
+    .conteiner-ctt,
+    .conteiner-rodape,
+    .box-Tool
 `)
 
 const observerOptions = { threshold: 0.2 };

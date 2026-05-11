@@ -66,11 +66,12 @@ input:focus {
     --spacing-header: 60px;
 
     --anime-opacity: 0;
-    --anime-transform: translateY(40px);
-    --anime-transition: all 0.9s ease;
+    /* --anime-transform: translateY(40px); */
+    --anime-transform: scale(0.96);
+    --anime-transition: all 1s ease;
 
-    --anime-hover-opacity: all 0.9s ease;
-    --anime-hover-transition: translateY(0);
+    --anime-hover-opacity: all 1s ease;
+    --anime-hover-transition: scale(1);
 
 }
 

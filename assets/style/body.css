@@ -354,7 +354,14 @@
 }
 
 #Sobre .conteiner-sobre .box-bnt-CV a {
-    background: var(--bg-color-main-sub);
+    background: linear-gradient(270deg,
+            #f18e2a,
+            #e5af52,
+            #f18e2a,
+            #e5af52);
+    background-size: 600% 600%;
+    animation: gradientAnim 3s ease infinite;
+
     font-size: var(--font-sub-title);
     text-decoration: none;
     padding: 10px;
@@ -366,6 +373,22 @@
     color: var(--texto-color-rev);
     font-weight: 500;
     transition: all 0.4s ease;
+}
+
+@keyframes gradientAnim {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
 }
 
 #Sobre .conteiner-sobre .box-bnt-CV a:hover {
@@ -583,6 +606,14 @@ FERRAMENTAS DE DEV
     flex-direction: column;
     gap: 10px;
     border-radius: 10px;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+.box-Tool.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 .box-Tool .box-Tool-infos {
@@ -864,6 +895,14 @@ FERRAMENTAS DE DEV
     align-items: center;
     justify-content: space-around;
     gap: 40px;
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+}
+
+.conteiner-ctt.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 @media screen and (max-width: 800px) {
@@ -1037,6 +1076,17 @@ FERRAMENTAS DE DEV
     width: 100%;
     margin: 0 auto;
     max-width: 1200px;
+
+    opacity: var(--anime-opacity);
+    transform: var(--anime-transform);
+    transition: var(--anime-transition);
+
+
+}
+
+.conteiner-rodape.show {
+    opacity: var(--anime-hover-opacity);
+    transform: var(--anime-hover-transition);
 }
 
 .conteiner-rodape .box-habilit-rd {
