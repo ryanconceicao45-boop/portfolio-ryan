@@ -390,7 +390,7 @@
     background: #040a22;
     display: flex;
     align-items: center;
-    padding: 0 20px 70px 20px;
+    padding: 50px 20px;
 }
 
 .conteiner-hab {
@@ -403,7 +403,6 @@
 }
 
 .box-heder-hab {
-    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -848,7 +847,7 @@ FERRAMENTAS DE DEV
 */
 #Contato {
     position: relative;
-    /* top: var(--spacing-header); */
+    top: var(--spacing-header);
     background: var(--bg-color-ctt-Main);
     display: flex;
     justify-content: center;
@@ -1025,9 +1024,7 @@ FERRAMENTAS DE DEV
 ====================================
 */
 #rodape {
-    background: #191936;
-    position: relative;
-    top: 0;
+    background: #0d0e3c;
     width: 100%;
-    height: 20vh;
+    height: 50vh;
 }
