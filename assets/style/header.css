@@ -28,9 +28,10 @@ header nav .box-left-header img {
     width: 40px;
     border-radius: 50%;
 }
+
 /*  MEU NOME RYAN  */
 header nav .box-left-header div h3 {
-    font-size: var(--fonte-header-title); 
+    font-size: var(--fonte-header-title);
     color: var(--texto-color-main);
 }
 
@@ -46,24 +47,57 @@ header nav .box-right-menu {
     gap: 15px;
 }
 
-header nav .box-right-menu .menu-btn{
+header nav .box-right-menu .menu-btn {
     display: none;
 }
 
-header nav .box-navegacao a {
+header nav .box-navegacao .bnt-header-a {
     font-size: var(--font-sub-title);
     color: var(--texto-color-sub);
     text-decoration: none;
     font-weight: 500;
     border-radius: 10px;
     padding: 5px 17px;
-    transition: 0.3s;
+    transition: all 0.5s ease;
     cursor: pointer;
 }
 
-header nav .box-navegacao a:hover {
+header nav .box-navegacao .bnt-header-a:hover {
     transform: scale(1.15);
-    transition: 0.3s;
     background: var(--bg-color-main-sub);
     color: var(--bg-color-main);
-} 
+}
+
+header nav .box-navegacao .bnt-header-pj {
+    background: linear-gradient(270deg,
+            #efaf55,
+            #ffff01,
+            #ebe454,
+            #feb385);
+
+    background-size: 600% 600%;
+    animation: gradientAnim 6s ease infinite;
+    font-size: var(--font-sub-title);
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 5px 17px;
+    cursor: pointer;
+}
+
+@keyframes gradientAnim {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}

@@ -27,11 +27,11 @@
                 <div onclick="openMenu()" class="menu-btn">☰</div>
 
                 <div class="box-navegacao">
-                    <a onclick="closeMenu()" href="#Inicio">Inicio</a>
-                    <a onclick="closeMenu()" href="#Sobre">Sobre</a>
-                    <a onclick="closeMenu()" href="#Habilidade">Habilidade</a>
+                    <a class="bnt-header-a" onclick="closeMenu()" href="#Inicio">Inicio</a>
+                    <a class="bnt-header-a" onclick="closeMenu()" href="#Sobre">Sobre</a>
+                    <a class="bnt-header-a" onclick="closeMenu()" href="#Habilidade">Habilidade</a>
+                    <a class="bnt-header-a" onclick="closeMenu()" href="#Contato">Contato</a>
                     <a class="bnt-header-pj">Projetos</a>
-                    <a onclick="closeMenu()" href="#Contato">Contato</a>
                 </div>
             </div>
         </nav>
@@ -260,7 +260,7 @@
 
             <div class="box-cc-2">
                 <div class="box-send-success">
-                    
+
                 </div>
                 <div class="box-int-pergunta">
                     <h3>TEM ALGUMA PERGUNTA?</h3>
@@ -269,17 +269,55 @@
                 <form class="box-form" id="formContato">
                     <input class="input-form" type="text" name="name" placeholder="Digite seu nome" required>
                     <input class="input-form" type="email" name="email" placeholder="Digite seu e-mail" required>
-                    <textarea maxlength="400" class="input-form input-area" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+                    <textarea maxlength="400" class="input-form input-area" name="mensagem"
+                        placeholder="Digite sua mensagem" required></textarea>
 
                     <button id="btn-submit" type="submit">
-                         Enviar menssagem →
+                        Enviar menssagem →
                     </button>
                 </form>
             </div>
         </div>
     </section>
     <footer id="rodape">
-
+        <div class="conteiner-rodape">
+            <div class="box-habilit-rd">
+                <div class="box-infos-rd">
+                    <span class="material-symbols-outlined">
+                        security
+                    </span>
+                    <div>
+                        <h6>Compromisso com qualidade</h6>
+                        <p>Desenvolvimento com as melhores práticas, acessibilidade e foco em resultados.</p>
+                    </div>
+                </div>
+                <div class="box-infos-rd">
+                    <span class="material-symbols-outlined">
+                        whatshot
+                    </span>
+                    <div>
+                        <h6>Sempre evoluindo</h6>
+                        <p>Estudando e aprendendo diariamente para entregar soluções cada vez melhores.</p>
+                    </div>
+                </div>
+                <div class="box-infos-rd">
+                    <span class="material-symbols-outlined">
+                        security
+                    </span>
+                    <div>
+                        <h6>Aberto a oportunidades</h6>
+                        <p>Novos desafios me motivam. Vamos construir algo incrível juntos!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="line-rd"></div>
+            <div class="box-copyinfos">
+                <p>© 2026 Stalony. Todos os direitos reservados.
+                    Desenvolvido para apresentar minha evolução, experiências e aprendizado ao longo da minha trajetória
+                    como desenvolvedor.
+                </p>
+            </div>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="./assets/src/script.js"></script>
